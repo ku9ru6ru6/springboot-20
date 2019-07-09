@@ -31,7 +31,7 @@ import javax.sql.DataSource;
 })
 public class MybatisConfig {
 
-    @Beanm
+    @Bean
     @Primary
     @ConfigurationProperties("hikari.first")
     public DataSource firstDataSource() {
