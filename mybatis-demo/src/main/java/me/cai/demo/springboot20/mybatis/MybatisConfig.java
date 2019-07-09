@@ -5,17 +5,12 @@ import org.apache.ibatis.session.SqlSessionFactory;
 import org.mybatis.spring.SqlSessionFactoryBean;
 import org.mybatis.spring.annotation.MapperScan;
 import org.mybatis.spring.annotation.MapperScans;
-import org.mybatis.spring.boot.autoconfigure.MybatisProperties;
 import org.mybatis.spring.boot.autoconfigure.SpringBootVFS;
-import org.mybatis.spring.transaction.SpringManagedTransactionFactory;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
-import org.springframework.boot.autoconfigure.jdbc.DataSourceProperties;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Primary;
-import org.springframework.core.io.ResourceLoader;
 import org.springframework.core.io.support.PathMatchingResourcePatternResolver;
 import org.springframework.jdbc.datasource.DataSourceTransactionManager;
 
@@ -36,14 +31,7 @@ import javax.sql.DataSource;
 })
 public class MybatisConfig {
 
-    @Autowired
-    private MybatisProperties properties;
-
-    @Autowired
-    private ResourceLoader resourceLoader;
-
-
-    @Bean
+    @Beanm
     @Primary
     @ConfigurationProperties("hikari.first")
     public DataSource firstDataSource() {
