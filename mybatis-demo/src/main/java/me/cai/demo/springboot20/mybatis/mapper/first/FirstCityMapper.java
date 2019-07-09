@@ -1,6 +1,7 @@
 package me.cai.demo.springboot20.mybatis.mapper.first;
 
 import me.cai.demo.springboot20.mybatis.model.City;
+import org.apache.ibatis.annotations.Select;
 
 /**
  * me.cai.demo.springboot20.mybatis.mapper.first
@@ -15,4 +16,7 @@ public interface FirstCityMapper {
     int insert(City city);
 
     City selectByPrimaryKey(Long id);
+
+    @Select("SELECT name FROM city WHERE id = #{id}")
+    City selectNameByPrimaryKey(Long id);
 }

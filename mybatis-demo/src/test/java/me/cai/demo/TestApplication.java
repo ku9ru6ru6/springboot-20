@@ -36,12 +36,15 @@ public class TestApplication {
     @Test
     @Transactional(value = "firstDataSourceTransactionManager", rollbackFor = Exception.class)
     public void testFirstCityMapper() {
-        City city = new City("first", "first", "first");
-        int result = firstCityMapper.insert(city);
+        City city_1 = new City("first", "first", "first");
+        int result = firstCityMapper.insert(city_1);
         log.info("testFirstCityMapper inster result:{}", result);
 
-        City city_second = firstCityMapper.selectByPrimaryKey(city.getId());
-        log.info("testFirstCityMapper selectByPrimaryKey result:{}", city_second);
+        City city_2 = firstCityMapper.selectByPrimaryKey(city_1.getId());
+        log.info("testFirstCityMapper selectByPrimaryKey result:{}", city_2);
+
+        City city_3 = firstCityMapper.selectNameByPrimaryKey(city_1.getId());
+        log.info("testFirstCityMapper selectByPrimaryKey result:{}", city_3);
     }
 
     @Test
