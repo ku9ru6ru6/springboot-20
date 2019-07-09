@@ -1,5 +1,6 @@
 package me.cai.demo.springboot20.mybatis;
 
+import com.zaxxer.hikari.HikariDataSource;
 import org.apache.ibatis.session.SqlSessionFactory;
 import org.mybatis.spring.SqlSessionFactoryBean;
 import org.mybatis.spring.annotation.MapperScan;
@@ -41,18 +42,12 @@ public class MybatisConfig {
     @Autowired
     private ResourceLoader resourceLoader;
 
-    @Bean
-    @Primary
-    @ConfigurationProperties("me.datasource.first")
-    public DataSourceProperties firstDataSourceProperties() {
-        return new DataSourceProperties();
-    }
 
     @Bean
     @Primary
-    @ConfigurationProperties("me.datasource.first.configuration")
+    @ConfigurationProperties("hikari.first")
     public DataSource firstDataSource() {
-        return firstDataSourceProperties().initializeDataSourceBuilder().build();
+        return new HikariDataSource();
     }
 
     @Bean
@@ -71,16 +66,11 @@ public class MybatisConfig {
         return factory.getObject();
     }
 
-    @Bean
-    @ConfigurationProperties("me.datasource.second")
-    public DataSourceProperties secondDataSourceProperties() {
-        return new DataSourceProperties();
-    }
 
     @Bean
-    @ConfigurationProperties("me.datasource.second.configuration")
+    @ConfigurationProperties("hikari.second")
     public DataSource secondDataSource() {
-        return secondDataSourceProperties().initializeDataSourceBuilder().build();
+        return new HikariDataSource();
     }
 
     @Bean
