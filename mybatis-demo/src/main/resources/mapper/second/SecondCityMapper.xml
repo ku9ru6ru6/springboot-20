@@ -8,8 +8,8 @@
  ~ Created by CodeGen .
 -->
 
-<mapper namespace="me.cai.demo.springboot20.mybatis.mapper.second.SecondCityMapper">
-    <resultMap id="beanMapper" type="me.cai.demo.springboot20.mybatis.model.City">
+<mapper namespace="me.cai.demo.mybatis.mapper.second.SecondCityMapper">
+    <resultMap id="beanMapper" type="me.cai.demo.mybatis.model.City">
         <id property="id" column="id"/>
         <result property="name" column="name"/>
         <result property="state" column="state"/>
@@ -41,7 +41,7 @@
         </where>
     </sql>
 
-    <insert id="create" parameterType="me.cai.demo.springboot20.mybatis.model.City" useGeneratedKeys="true" keyProperty="id">
+    <insert id="create" parameterType="me.cai.demo.mybatis.model.City" useGeneratedKeys="true" keyProperty="id">
         INSERT INTO
         <include refid="table_name"/>
         (<include refid="columns_exclude_id"/>)

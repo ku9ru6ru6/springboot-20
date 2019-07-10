@@ -1,10 +1,10 @@
 package me.cai.demo;
 
 import lombok.extern.slf4j.Slf4j;
-import me.cai.demo.springboot20.mybatis.SpringBootStarter;
-import me.cai.demo.springboot20.mybatis.mapper.first.FirstCityMapper;
-import me.cai.demo.springboot20.mybatis.mapper.second.SecondCityMapper;
-import me.cai.demo.springboot20.mybatis.model.City;
+import me.cai.demo.mybatis.SpringBootStarter;
+import me.cai.demo.mybatis.mapper.first.FirstCityMapper;
+import me.cai.demo.mybatis.mapper.second.SecondCityMapper;
+import me.cai.demo.mybatis.model.City;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;

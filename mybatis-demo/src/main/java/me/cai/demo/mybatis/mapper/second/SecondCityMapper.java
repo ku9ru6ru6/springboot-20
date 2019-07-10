@@ -1,6 +1,6 @@
-package me.cai.demo.springboot20.mybatis.mapper.second;
+package me.cai.demo.mybatis.mapper.second;
 
-import me.cai.demo.springboot20.mybatis.model.City;
+import me.cai.demo.mybatis.model.City;
 
 /**
  * me.cai.demo.springboot20.mybatis.mapper.second

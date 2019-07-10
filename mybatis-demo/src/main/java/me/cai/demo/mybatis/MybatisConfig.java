@@ -1,4 +1,4 @@
-package me.cai.demo.springboot20.mybatis;
+package me.cai.demo.mybatis;
 
 import com.zaxxer.hikari.HikariDataSource;
 import org.apache.ibatis.session.SqlSessionFactory;
@@ -26,8 +26,8 @@ import javax.sql.DataSource;
  */
 @Configuration
 @MapperScans({
-        @MapperScan(basePackages = {"me.cai.demo.springboot20.mybatis.mapper.first"}, sqlSessionFactoryRef = "firstSqlSessionFactory"),
-        @MapperScan(basePackages = {"me.cai.demo.springboot20.mybatis.mapper.second"}, sqlSessionFactoryRef = "secondSqlSessionFactory")
+        @MapperScan(basePackages = {"me.cai.demo.mybatis.mapper.first"}, sqlSessionFactoryRef = "firstSqlSessionFactory"),
+        @MapperScan(basePackages = {"me.cai.demo.mybatis.mapper.second"}, sqlSessionFactoryRef = "secondSqlSessionFactory")
 })
 public class MybatisConfig {
 

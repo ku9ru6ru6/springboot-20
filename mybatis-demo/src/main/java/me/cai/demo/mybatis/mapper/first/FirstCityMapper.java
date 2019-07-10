@@ -1,6 +1,6 @@
-package me.cai.demo.springboot20.mybatis.mapper.first;
+package me.cai.demo.mybatis.mapper.first;
 
-import me.cai.demo.springboot20.mybatis.model.City;
+import me.cai.demo.mybatis.model.City;
 import org.apache.ibatis.annotations.Select;
 
 /**

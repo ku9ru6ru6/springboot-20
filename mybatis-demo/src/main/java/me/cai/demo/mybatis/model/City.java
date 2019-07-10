@@ -1,4 +1,4 @@
-package me.cai.demo.springboot20.mybatis.model;
+package me.cai.demo.mybatis.model;
 
 import lombok.Data;
 import lombok.NoArgsConstructor;
