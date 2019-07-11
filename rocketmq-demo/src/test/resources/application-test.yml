@@ -1,0 +1,8 @@
+logging:
+  level.root: WARN
+  level.me.cai.demo: DEBUG
+
+rocketmq:
+  name-server: localhost:9876
+  producer:
+    group: my-group

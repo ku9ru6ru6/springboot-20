@@ -5,3 +5,12 @@ spring:
   output:
     ansi:
       enabled: ALWAYS
+
+rocketmq:
+  name-server: localhost:9876
+  producer:
+    group: my-group
+
+logging:
+  level.root: WARN
+  level.me.cai.demo: DEBUG
