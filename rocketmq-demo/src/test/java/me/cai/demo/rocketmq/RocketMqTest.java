@@ -29,7 +29,7 @@ import java.util.List;
 @Slf4j
 @ActiveProfiles("test")
 @RunWith(SpringRunner.class)
-@SpringBootTest(classes = SpringBootStarter.class)
+@SpringBootTest(classes = RocketMqSpringBootStarter.class)
 public class RocketMqTest {
 
     @Autowired

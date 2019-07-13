@@ -17,7 +17,7 @@ import org.springframework.test.context.junit4.SpringRunner;
 @Slf4j
 @ActiveProfiles("test")
 @RunWith(SpringRunner.class)
-@SpringBootTest(classes = SpringBootStarter.class)
+@SpringBootTest(classes = RedisSpringBootStarter.class)
 public class RedisTest {
 
 

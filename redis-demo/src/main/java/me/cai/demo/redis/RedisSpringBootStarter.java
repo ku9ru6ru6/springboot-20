@@ -12,8 +12,8 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  * description:
  */
 @SpringBootApplication
-public class SpringBootStarter {
+public class RedisSpringBootStarter {
     public static void main(String[] args) {
-        SpringApplication.run(SpringBootStarter.class, args);
+        SpringApplication.run(RedisSpringBootStarter.class, args);
     }
 }

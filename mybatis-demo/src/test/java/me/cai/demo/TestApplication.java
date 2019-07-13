@@ -1,7 +1,7 @@
 package me.cai.demo;
 
 import lombok.extern.slf4j.Slf4j;
-import me.cai.demo.mybatis.SpringBootStarter;
+import me.cai.demo.mybatis.MybatisSpringBootStarter;
 import me.cai.demo.mybatis.mapper.first.FirstCityMapper;
 import me.cai.demo.mybatis.mapper.second.SecondCityMapper;
 import me.cai.demo.mybatis.model.City;
@@ -24,7 +24,7 @@ import org.springframework.transaction.annotation.Transactional;
 @Slf4j
 @Rollback(value = false)
 @RunWith(SpringRunner.class)
-@SpringBootTest(classes = SpringBootStarter.class)
+@SpringBootTest(classes = MybatisSpringBootStarter.class)
 public class TestApplication {
 
     @Autowired
