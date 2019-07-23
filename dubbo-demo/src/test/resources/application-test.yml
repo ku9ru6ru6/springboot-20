@@ -1,0 +1,20 @@
+server:
+  port: 8081
+
+spring:
+  application:
+    name: dubbo-spring-boot-starter-test
+  output:
+    ansi:
+      enabled: ALWAYS
+
+logging:
+  level.root: WARN
+  level.me.cai.demo: DEBUG
+
+dubbo:
+  protocol:
+    name: dubbo
+    port: 20881
+  registry:
+    address: zookeeper://127.0.0.1:2181
