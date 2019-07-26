@@ -85,6 +85,11 @@
 				<artifactId>dubbo-dependencies-zookeeper</artifactId>
 				<version>${dubbo.version}</version>
 			</dependency>
+			<dependency>
+				<groupId>org.apache.dubbo</groupId>
+				<artifactId>dubbo-metadata-report-redis</artifactId>
+				<version>${dubbo.version}</version>
+			</dependency>
 		</dependencies>
 	</dependencyManagement>
 
