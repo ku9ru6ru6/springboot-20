@@ -1,0 +1,24 @@
+server:
+  port: 8081
+
+spring:
+  application:
+    name: dubbo-consumer
+  output:
+    ansi:
+      enabled: ALWAYS
+
+logging:
+  level.root: WARN
+  level.me.cai.demo: DEBUG
+
+dubbo:
+  protocol:
+    name: dubbo
+    port: 20881
+  registry:
+    address: zookeeper://127.0.0.1:2181
+    # register = false 只订阅
+    register: false
+  metadata-report:
+    address: redis://127.0.0.1:6379

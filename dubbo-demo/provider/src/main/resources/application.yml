@@ -1,0 +1,28 @@
+server:
+  port: 8080
+
+spring:
+  application:
+    name: dubbo-provider
+  output:
+    ansi:
+      enabled: ALWAYS
+
+logging:
+  level.root: WARN
+  level.me.cai.demo: DEBUG
+
+dubbo:
+  scan:
+    base-packages: me.cai.demo.dubbo.provider
+  protocol:
+    name: dubbo
+    port: 20880
+  registry:
+    address: zookeeper://127.0.0.1:2181
+    # subscribe = false 只注册
+    subscribe: false
+  metadata-report:
+    address: redis://127.0.0.1:6379
+  provider:
+    version: 1.0

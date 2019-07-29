@@ -7,7 +7,9 @@
 		<module>mybatis-demo</module>
         <module>rocketmq-demo</module>
 		<module>redis-demo</module>
-        <module>dubbo-demo</module>
+		<module>dubbo-demo/consumer</module>
+		<module>dubbo-demo/provider</module>
+		<module>dubbo-demo/dubbo-api</module>
     </modules>
 	<parent>
 		<groupId>org.springframework.boot</groupId>
@@ -81,9 +83,24 @@
 				<version>${dubbo.version}</version>
 			</dependency>
 			<dependency>
-				<groupId>org.apache.dubbo</groupId>
-				<artifactId>dubbo-dependencies-zookeeper</artifactId>
-				<version>${dubbo.version}</version>
+				<groupId>org.apache.curator</groupId>
+				<artifactId>curator-recipes</artifactId>
+				<version>4.0.1</version>
+			</dependency>
+			<dependency>
+				<groupId>org.apache.zookeeper</groupId>
+				<artifactId>zookeeper</artifactId>
+				<version>3.4.13</version>
+				<exclusions>
+					<exclusion>
+						<artifactId>log4j</artifactId>
+						<groupId>log4j</groupId>
+					</exclusion>
+					<exclusion>
+						<artifactId>slf4j-log4j12</artifactId>
+						<groupId>org.slf4j</groupId>
+					</exclusion>
+				</exclusions>
 			</dependency>
 			<dependency>
 				<groupId>org.apache.dubbo</groupId>
