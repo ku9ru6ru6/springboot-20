@@ -13,6 +13,7 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Primary;
 import org.springframework.core.io.support.PathMatchingResourcePatternResolver;
 import org.springframework.jdbc.datasource.DataSourceTransactionManager;
+import org.springframework.transaction.annotation.EnableTransactionManagement;
 
 import javax.sql.DataSource;
 
@@ -29,6 +30,7 @@ import javax.sql.DataSource;
         @MapperScan(basePackages = {"me.cai.demo.mybatis.mapper.first"}, sqlSessionFactoryRef = "firstSqlSessionFactory"),
         @MapperScan(basePackages = {"me.cai.demo.mybatis.mapper.second"}, sqlSessionFactoryRef = "secondSqlSessionFactory")
 })
+@EnableTransactionManagement
 public class MybatisConfig {
 
     @Bean
