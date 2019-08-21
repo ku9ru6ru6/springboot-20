@@ -12,6 +12,7 @@
 		<module>dubbo-demo/dubbo-api</module>
         <module>zk-demo</module>
         <module>proxy-demo</module>
+        <module>dubbo-demo/dubbp-spi</module>
     </modules>
 	<parent>
 		<groupId>org.springframework.boot</groupId>

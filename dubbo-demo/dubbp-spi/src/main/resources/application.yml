@@ -1,0 +1,13 @@
+server:
+  port: 8080
+
+spring:
+  application:
+    name: dubbo-spi
+  output:
+    ansi:
+      enabled: ALWAYS
+
+logging:
+  level.root: WARN
+  level.me.cai.demo: DEBUG
