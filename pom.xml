@@ -13,6 +13,7 @@
         <module>zk-demo</module>
         <module>proxy-demo</module>
         <module>dubbo-demo/dubbp-spi</module>
+        <module>data-structure</module>
     </modules>
 	<parent>
 		<groupId>org.springframework.boot</groupId>
