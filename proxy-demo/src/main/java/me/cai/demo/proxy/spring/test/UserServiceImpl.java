@@ -21,4 +21,10 @@ public class UserServiceImpl implements UserService {
     public void sayHello() {
         log.debug("Hello!");
     }
+
+    @Override
+    @SpElParamTest(spel = "#{#person.name}")
+    public void paramSpElTest(Person person) {
+        log.debug("complete paramSpElTest");
+    }
 }

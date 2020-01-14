@@ -11,4 +11,6 @@ package me.cai.demo.proxy.spring.test;
 public interface UserService {
 
     void sayHello();
+
+    void paramSpElTest(Person person);
 }

@@ -1,6 +1,7 @@
 package me.cai.demo.proxy.spring.run;
 
 import lombok.extern.slf4j.Slf4j;
+import me.cai.demo.proxy.spring.test.Person;
 import me.cai.demo.proxy.spring.test.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
@@ -23,6 +24,6 @@ public class MyRunner implements CommandLineRunner {
 
     @Override
     public void run(String... args) throws Exception {
-        userService.sayHello();
+        userService.paramSpElTest(new Person("cai", 25));
     }
 }
