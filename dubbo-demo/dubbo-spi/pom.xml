@@ -10,7 +10,7 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>dubbp-spi</artifactId>
+    <artifactId>dubbo-spi</artifactId>
 
     <dependencies>
         <dependency>
