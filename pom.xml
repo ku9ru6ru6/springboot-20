@@ -14,7 +14,8 @@
         <module>proxy-demo</module>
         <module>dubbo-demo/dubbo-spi</module>
         <module>data-structure</module>
-    </modules>
+		<module>spring-basics</module>
+	</modules>
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>

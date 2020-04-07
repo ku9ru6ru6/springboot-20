@@ -1,0 +1,16 @@
+server:
+  port: 8080
+
+spring:
+  output:
+    ansi:
+      enabled: ALWAYS
+  main:
+    web-application-type: NONE
+
+logging:
+  level:
+    root: WARN
+    me:
+      cai:
+        demo: DEBUG
