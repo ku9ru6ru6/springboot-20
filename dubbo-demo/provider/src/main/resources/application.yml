@@ -3,7 +3,7 @@ server:
 
 spring:
   application:
-    name: dubbo-provider
+    name: dubbo-demo
   output:
     ansi:
       enabled: ALWAYS
@@ -19,10 +19,10 @@ dubbo:
     name: dubbo
     port: 20880
   registry:
-    address: zookeeper://127.0.0.1:2181
+    address: nacos://127.0.0.1:8848
     # subscribe = false 只注册
     subscribe: false
   metadata-report:
-    address: redis://127.0.0.1:6379
+    address: nacos://127.0.0.1:8848
   provider:
     version: 1.0

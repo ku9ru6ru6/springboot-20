@@ -18,7 +18,7 @@ import org.springframework.stereotype.Component;
 @Component
 public class ConsumerTest implements CommandLineRunner {
 
-    @Reference(version = "1.0", mock = "me.cai.demo.dubbo.provider.ProviderDemoMock")
+    @Reference(mock = "me.cai.demo.dubbo.provider.ProviderDemoMock")
     private ProviderDemo providerDemo;
 
     @Override

@@ -24,7 +24,7 @@ public class ProviderDemoImpl implements ProviderDemo {
 
     @Override
     public String sayHello() {
-        log.error(mySpringBean.toString());
+        log.info(mySpringBean.toString());
         return "Hello";
     }
 
