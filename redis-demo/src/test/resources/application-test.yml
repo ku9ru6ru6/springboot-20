@@ -1,4 +1,10 @@
+server:
+  port: 8080
+
 spring:
+  output:
+    ansi:
+      enabled: ALWAYS
   redis:
     database: 0
     host: 127.0.0.1
@@ -6,3 +12,7 @@ spring:
     pool:
       min-idle: 1
       max-idle: 5
+
+logging:
+  level.root: WARN
+  level.me.cai.demo: DEBUG

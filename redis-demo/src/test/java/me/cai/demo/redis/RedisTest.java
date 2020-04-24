@@ -2,11 +2,14 @@ package me.cai.demo.redis;
 
 import lombok.extern.slf4j.Slf4j;
 import me.cai.demo.redis.example.SimpleStringExample;
+import me.cai.demo.redis.model.Person;
 import org.junit.Assert;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.test.context.ActiveProfiles;
 import org.springframework.test.context.junit4.SpringRunner;
 
@@ -29,6 +32,10 @@ public class RedisTest {
 
     @Autowired
     private SimpleStringExample simpleStringExample;
+
+    @Autowired
+    @Qualifier("jsonRedisTemplate")
+    private RedisTemplate<String, Object> jsonRedisTemplate;
 
     @Test
     public void testSimpleStringExample() {
@@ -56,5 +63,21 @@ public class RedisTest {
         Assert.assertFalse(simpleStringExample.ifContains(key, targetValue));
         targetValue = "a";
         Assert.assertFalse(simpleStringExample.ifContains(key, targetValue));
+    }
+
+    @Test
+    public void testJsonRedisTemplate() {
+        final String key = "person_a";
+        final Person person = new Person();
+        person.setId(1);
+        person.setName("cai");
+        person.setAge(25);
+        person.setPhoneNumber("18368493646");
+
+        jsonRedisTemplate.opsForValue().set(key, person);
+
+        Object value = jsonRedisTemplate.opsForValue().get(key);
+        Assert.assertNotNull(value);
+        log.info("get person value:{}", value);
     }
 }
