@@ -1,0 +1,21 @@
+server:
+  port: 8081
+
+spring:
+  output:
+    ansi:
+      enabled: ALWAYS
+
+logging:
+  level.root: WARN
+  level.me.cai.demo: DEBUG
+  level.org.apache.curator: INFO
+
+me:
+  zk:
+    address: 127.0.0.1:2181
+    sessionTimeoutMs: 5000
+    connectionTimeoutMs: 5000
+    retryPolicy:
+      baseSleepTimeMs: 3000
+      maxRetries: 3
