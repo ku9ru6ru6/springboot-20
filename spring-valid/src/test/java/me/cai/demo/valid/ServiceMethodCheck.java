@@ -15,7 +15,7 @@ import javax.validation.ConstraintViolationException;
 @Slf4j
 @RunWith(SpringRunner.class)
 @SpringBootTest(classes = SpringValidStarter.class)
-public class ValidTest {
+public class ServiceMethodCheck {
 
     @Autowired
     private HelloService helloService;
